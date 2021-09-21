@@ -15,6 +15,18 @@ h1, h2, h3, h4 {
     font-weight: normal;
 }
 
+.button {
+    font-family: inherit;
+    font-weight: 500;
+    text-decoration: none;
+    color: #1c6698;
+    display: inline-block;
+    margin-top: 24px;
+    padding: 13px 31px;
+    border-radius: 3px;
+    border: solid 2px #1c6698;
+}
+
 /*Layout*/
 .wrapper {
     padding-left: 24px;
@@ -43,6 +55,7 @@ header {
 
 header h2 {
     font-size: 14px;
+    letter-spacing: 3px;
 }
 
 header #icon-close {
@@ -54,6 +67,15 @@ header nav {
 }
 
 /*main section (summary)*/
+article section:first-child p {
+    font-size: 18px;
+}
+
+article section:first-child h1 {
+    font-size: 36px;
+    width: 220px;
+    margin: 0 auto;
+}
 
 /*about me*/
 
