@@ -1,5 +1,4 @@
 /* General */
-
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
@@ -7,6 +6,7 @@ body {
     line-height: 1.43;
     background: #e7e7e7;
     margin: 0;
+    text-align: center;
 }
 
 h1, h2, h3, h4 {
@@ -20,6 +20,17 @@ h1, h2, h3, h4 {
     padding-left: 24px;
     padding-right: 24px;
 }
+
+article section:nth-child(even) {
+    background: black;
+}
+
+article section {
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+
+/*header*/
 
 header {
     display: flex;
@@ -37,6 +48,17 @@ header h2 {
 header #icon-close {
     display: none;
 }
+
 header nav {
     display: none;
+}
+
+/*main section (summary)*/
+
+/*about me*/
+
+/*skills*/
+
+footer {
+
 }
