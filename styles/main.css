@@ -49,7 +49,7 @@ strong {
 }
 
 /* Layout */
-.wrapper {   /*update article #skills .list::before*/
+.wrapper { /*update article #skills .list::before*/
     padding-left: 24px;
     padding-right: 24px;
 }
@@ -66,6 +66,7 @@ article section {
 /* Header */
 
 header {
+    position: relative;
     display: flex;
     height: 64px;
     justify-content: space-between;
@@ -80,12 +81,37 @@ header h2 {
     letter-spacing: 3px;
 }
 
-header #icon-close {
+header nav,
+header.nav-open #icon-open {
     display: none;
 }
 
+header.nav-open nav,
+header.nav-open #icon-close {
+    display: block;
+}
+
+header.nav-open #icon-close{
+    z-index: 1;
+}
+
 header nav {
-    display: none;
+    background: #e7e7e7;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    padding: 50px;
+}
+
+header nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    padding: 20px;
 }
 
 /* Article */
@@ -100,8 +126,26 @@ article section:first-child h1 {
     margin: 0 auto;
 }
 
+
 article #about-me { /*about me*/
     color: #a2a2a2;
+}
+
+/* See: https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+article #about-me .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+article #about-me .videoWrapper iframe {
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 article #skills { /*skills*/
@@ -118,7 +162,6 @@ article #skills .list {
     padding-bottom: 16px;
     overflow: auto;
     display: flex;
-    justify-content: center;
 }
 
 article #skills .list .skill {
@@ -160,4 +203,16 @@ footer {
     background: black;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (min-width: 500px) {
+    article #skills .list {
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    article #skills .list .skill {
+        margin-right: 128px;
+    }
 }
