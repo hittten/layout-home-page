@@ -118,6 +118,7 @@ article #skills .list {
     padding-bottom: 16px;
     overflow: auto;
     display: flex;
+    justify-content: center;
 }
 
 article #skills .list .skill {
